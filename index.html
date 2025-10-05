@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ua">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ЛР №2</title>
+  <meta name="description" content="ЛР №2: масив чисел, поріг P, факторіал F, оцінка за середнім" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="app">
+    <header>
+      <div class="topbar">
+        <a class="brand" href="#">
+          <div class="logo" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M4 12c4-8 12-8 16 0-4 8-12 8-16 0Z" stroke="#0b1020" stroke-width="2"/>
+              <circle cx="12" cy="12" r="2.6" fill="#0b1020"/>
+            </svg>
+          </div>
+          <div>
+            <h1>ЛР №2 — JavaScript Методи</h1>
+            <small>Масив · Поріг P · Факторіал · Оцінка</small>
+          </div>
+        </a>
+        <div class="actions">
+          <button class="btn" id="runBtn" title="Выполнить розрахунки">Виконати</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card">
+          <div class="card-header">
+            <span class="chip">Вхідні дані</span>
+          </div>
+          <div class="card-body">
+            <div class="grid cols-2">
+              <div class="field">
+                <label>Масив чисел (через кому)</label>
+                <input class="input" id="arrInput" placeholder="12, 7, 19, 5, 9" inputmode="numeric" />
+                <div class="row">
+                  <button class="pill" id="fillVariant" type="button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 17h16M4 12h16M4 7h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    Вставити дані для 1 варіанту
+                  </button>
+                  <button class="pill" id="clearArr" type="button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    Очистити
+                  </button>
+                </div>
+              </div>
+              <div class="grid">
+                <div class="field">
+                  <label>Поріг P</label>
+                  <input class="input" id="pInput" placeholder="10" inputmode="numeric"/>
+                </div>
+                <div class="field">
+                  <label>Число F (факторіал)</label>
+                  <input class="input" id="fInput" placeholder="5" inputmode="numeric"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="sep"></div>
+            <div class="row">
+              <button class="btn ghost" id="btnEvenPreview" type="button">Показати парні</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="chip">Результати</span>
+          </div>
+          <div class="card-body">
+            <div class="result">
+              <div class="stat"><div><div class="muted">Сума / Середнє</div><div class="val" id="resSum">—</div></div></div>
+              <div class="stat"><div><div class="muted">Макс / Мін (індекси)</div><div class="val" id="resMinMax">—</div></div></div>
+              <div class="stat"><div><div class="muted">К-ть &gt; P</div><div class="val" id="resCount">—</div></div></div>
+              <div class="stat"><div><div class="muted">Оцінка</div><div class="val" id="resGrade">—</div></div></div>
+            </div>
+
+            <div class="sep"></div>
+            <div class="toolbar">
+              <div class="row">
+                <button class="btn-sm" id="copyJson" type="button">Скопіювати JSON</button>
+                <button class="btn-sm" id="clearLog" type="button">Очистити лог</button>
+              </div>
+              <span class="muted">Консоль</span>
+            </div>
+            <div class="console" id="consoleBox" aria-live="polite">
+              <div class="log">Готов до розрахунків…</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footwrap">
+        <div>© ЛР №2 Бізін Сергій Ілліч</div>
+        <div class="muted">Масив · Поріг P · Факторіал · Оцінка</div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="./scripts/app.js"></script>
+</body>
+</html>
